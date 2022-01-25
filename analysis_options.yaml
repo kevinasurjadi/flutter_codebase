@@ -25,5 +25,32 @@ linter:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
 
+    # Error
+    avoid_slow_async_io: true
+    cancel_subscriptions: true
+    close_sinks: true
+    comment_references: true
+    prefer_relative_imports: true
+    unnecessary_statements: true
+
+    # Style
+    always_declare_return_types: true
+    always_put_required_named_parameters_first: true
+    avoid_catches_without_on_clauses: true
+    avoid_multiple_declarations_per_line: true
+    avoid_unused_constructor_parameters: true
+    flutter_style_todos: true
+    no_leading_underscores_for_local_identifiers: true
+    no_runtimeType_toString: true
+    only_throw_errors: true
+    prefer_double_quotes: true
+    sort_constructors_first: true
+    sort_unnamed_constructors_first: true
+    use_setters_to_change_properties: true
+
+    # Pub
+    secure_pubspec_urls: true
+    sort_pub_dependencies: false
+
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

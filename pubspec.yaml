@@ -33,6 +33,7 @@ dependencies:
     sdk: flutter
   flutter_native_splash: ^2.0.5
   package_info_plus: ^1.4.0
+  shared_preferences: ^2.0.13
 
 dev_dependencies:
   flutter_flavorizr: ^2.1.2

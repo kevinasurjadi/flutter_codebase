@@ -1,4 +1,5 @@
 import 'package:http/http.dart' as http;
+import 'package:injectable/injectable.dart';
 
 abstract class HttpClientService {
   Future<http.Response> get(
@@ -31,11 +32,12 @@ abstract class HttpClientService {
   });
 }
 
+@LazySingleton(as: HttpClientService)
 class HttpClientServiceImpl implements HttpClientService {
   final http.Client client;
   final String baseUrl;
 
-  const HttpClientServiceImpl(this.client, this.baseUrl);
+  const HttpClientServiceImpl(this.client, @Named('baseUrl') this.baseUrl);
 
   @override
   Future<http.Response> get(

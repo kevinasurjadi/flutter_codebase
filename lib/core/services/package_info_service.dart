@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 abstract class PackageInfoService {
@@ -8,6 +9,7 @@ abstract class PackageInfoService {
   String get buildSignature;
 }
 
+@LazySingleton(as: PackageInfoService)
 class PackageInfoServiceImpl implements PackageInfoService {
   final PackageInfo packageInfo;
 

@@ -1,3 +1,4 @@
+import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class SharedPreferencesService {
@@ -6,6 +7,7 @@ abstract class SharedPreferencesService {
   Future<bool> remove(String key);
 }
 
+@LazySingleton(as: SharedPreferencesService)
 class SharedPreferencesServiceImpl implements SharedPreferencesService {
   final SharedPreferences sharedPreferences;
 

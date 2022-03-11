@@ -1,0 +1,6 @@
+{
+    "@@locale": "en_US",
+    "appbarText": "Flutter Demo Home Page",
+    "content": "You have pushed the button this many times:",
+    "floatingButtonTooltip": "Increment"
+}

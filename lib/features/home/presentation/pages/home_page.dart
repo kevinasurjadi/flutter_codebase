@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codebase/generated/l10n.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
+  const HomePage({required this.title, Key? key}) : super(key: key);
 
   final String title;
 
@@ -28,8 +29,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              S.of(context).content,
             ),
             Text(
               '$_counter',
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: S.of(context).floatingButtonTooltip,
         child: const Icon(Icons.add),
       ),
     );

@@ -6,7 +6,8 @@ import 'core/di/service_locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // Uncomment this to enable firebase
+  // await Firebase.initializeApp();
   configureDependencies();
   runApp(const App());
 }
